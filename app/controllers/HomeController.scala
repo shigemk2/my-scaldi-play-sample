@@ -5,7 +5,7 @@ import javax.inject._
 import play.api._
 import play.api.mvc._
 import scaldi.{Injectable, Injector}
-import services.MessageService
+import service.MessageService
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
@@ -13,7 +13,7 @@ import services.MessageService
  */
 @Singleton
 class HomeController(implicit inj: Injector) extends Controller with Injectable {
-  val messageService = inject[MessageService]
+  val messageService = inject [MessageService]
 
   def index = Action {
     Ok(views.html.index(messageService.getGreetMessage("test user")))
