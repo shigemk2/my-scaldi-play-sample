@@ -3,7 +3,7 @@ package service
 import scaldi.{Injectable, Injector}
 
 trait MessageService {
-  def getGreetMessage(str: String): String
+  def getGreetMessage(name: String): String
 }
 
 class OfficialMessageService(implicit inj: Injector) extends MessageService with Injectable {
