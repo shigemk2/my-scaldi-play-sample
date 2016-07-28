@@ -6,6 +6,8 @@ scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
   "org.scaldi" %% "scaldi-play" % "0.5.15",
+  "org.specs2" %% "specs2-core" % "3.5" % "test",
+  "org.specs2" %% "specs2-junit" % "3.5" % "test",
   jdbc,
   cache,
   ws,
